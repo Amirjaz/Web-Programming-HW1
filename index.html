@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Price Calculator</title>
+    <link rel="icon" type="image/x-icon" href="/img/favicon.png" />
+
+    <link
+      href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div id="alert" class="alert hidden">کالا با موفقیت ثبت شد!</div>
+
+      <h1>سیستم محاسبات فروش</h1>
+
+      <div class="input-section">
+        <input type="text" id="name" placeholder="نام کالا" />
+        <input type="text" id="fee" placeholder="قیمت واحد" />
+        <input type="text" id="count" placeholder="تعداد" />
+        <input type="text" id="discount" placeholder="تخفیف" />
+
+        <button id="submit-btn" class="submit-btn">ثبت کالا</button>
+      </div>
+
+      <div class="results-section">
+        <formula evaluator="count*fee-discount" data-label="قیمت خام"></formula>
+        <formula evaluator="count*fee*0.09" data-label="مالیات"></formula>
+        <formula evaluator="fee*0.09" data-label="سود واحد"></formula>
+      </div>
+    </div>
+
+    <script src="/js/script.js"></script>
+  </body>
+</html>
